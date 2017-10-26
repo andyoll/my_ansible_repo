@@ -2,7 +2,7 @@
 # This playbook installs dev environment components on my gcp vm
 
 - name: Setup Dev Environment
-  hosts: local
+  hosts: localhost
   become: yes
 
   roles:
