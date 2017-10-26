@@ -1,6 +1,6 @@
 ---
 
-- name: Install xfce
+- name: Install xfce4
   package:
-    name: xfce
+    name: xfce4
     state: latest
