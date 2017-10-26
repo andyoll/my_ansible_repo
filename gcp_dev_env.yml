@@ -7,6 +7,6 @@
 
   roles:
     - xfce
-    - vncserver
+    - vnc4server
     - chrome
     - chrome_remote_desktop
