@@ -1,0 +1,6 @@
+---
+
+- name: Install VNC4Server
+  package:
+    name: vnc4server
+    state: latest

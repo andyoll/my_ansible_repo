@@ -1,0 +1,12 @@
+---
+# This playbook installs dev environment components on my gcp vm
+
+- name: Setup Dev Environment
+  hosts: local
+  become: yes
+
+  roles:
+    - xfce
+    - vncserver
+    - chrome
+    - chrome_remote_desktop

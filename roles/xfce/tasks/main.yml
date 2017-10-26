@@ -1,0 +1,6 @@
+---
+
+- name: Install xfce
+  package:
+    name: xfce
+    state: latest
