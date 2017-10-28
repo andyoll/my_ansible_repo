@@ -1,0 +1,6 @@
+---
+
+- name: Install OpenJdk8
+  package:
+    name: openjdk-8-jdk
+    state: latest

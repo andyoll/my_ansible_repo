@@ -1,0 +1,7 @@
+---
+
+- name: Install IntelliJ IDEA
+  unarchive:
+    src: https://download-cf.jetbrains.com/idea/ideaIC-2017.2.5-no-jdk.tar.gz
+    dest: /opt/
+    remote_src: yes

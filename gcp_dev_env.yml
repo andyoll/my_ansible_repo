@@ -10,3 +10,6 @@
     - vnc4server
     - chrome
     - chrome_remote_desktop
+    - openjdk8
+    - intellij_idea
+
