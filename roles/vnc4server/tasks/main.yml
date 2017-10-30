@@ -6,6 +6,15 @@
     state: latest
 
 
+- name: create ~/.vnc directory
+  file:
+    path: /home/andy_olliver/.vnc
+    state: directory
+    owner: andy_olliver
+    group: andy_olliver
+    mode: 0700
+
+
 - name: Add VNC Config
   copy:
     src: xstartup
