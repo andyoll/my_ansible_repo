@@ -24,6 +24,11 @@
     mode: 0644
 
 
+- name: Install python pexpect
+  pip:
+    name: pexpect
+
+
 - name: Create VncServer passwd file
   expect:
     command: /usr/bin/vncpasswd /home/andy_olliver/.vnc/passwd
