@@ -34,7 +34,7 @@
 
 
 - name: Set permissions on VncServer passwd file
-- file:
+  file:
     path: /home/andy_olliver/.vnc/passwd
     owner: andy_olliver
     group: andy_olliver
