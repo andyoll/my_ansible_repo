@@ -4,3 +4,47 @@
   package:
     name: vnc4server
     state: latest
+
+
+- name: Add VNC Config
+  copy:
+    src: xstartup
+    dest: /home/andy_olliver/.vnc/xstartup
+    owner: andy_olliver
+    group: andy_olliver
+    mode: 0644
+
+
+- name: Create VncServer passwd file
+  expect:
+    command: /usr/bin/vncpasswd /home/andy_olliver/.vnc/passwd
+    responses:
+      (?i)password: "MySekretPa$$word"
+      (?i)verify: "MySekretPa$$word"
+    creates: /home/andy_olliver/.vnc/passwd
+
+
+- name: Set permissions on VncServer passwd file
+- file:
+    path: /home/andy_olliver/.vnc/passwd
+    owner: andy_olliver
+    group: andy_olliver
+    mode: 0600
+
+
+- name: Add SystemD Startup service for VncServer
+  copy:
+    src: vncserver@.service
+    dest: /etc/systemd/system/vncserver@.service
+    owner: root
+    group: root
+    mode: 0644
+
+
+- name: Systemd - reload config, enable vncserver, restart vncserver
+  systemd:
+    daemon_reload: yes
+    name: vncserver@:1
+    enabled: yes
+    state: restarted
+
