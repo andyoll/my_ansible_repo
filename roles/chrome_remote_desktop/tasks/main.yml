@@ -3,3 +3,12 @@
 - name: Install Chrome Remote Desktop
   apt:
     deb: https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
+
+- name: Add Chrome Remote Desktop config
+  copy:
+    src: .chrome-remote-desktop-session
+    dest: /home/andy_olliver/.chrome-remote-desktop-session
+    owner: andy_olliver
+    group: andy_olliver
+    mode: 0640
+
