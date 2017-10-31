@@ -25,8 +25,8 @@
 
 
 - name: Install Pip
-  easy_install:
-    name: pip
+  package:
+    name: python-pip
     state: latest
 
 
