@@ -25,11 +25,15 @@
     repo: "deb [arch=amd64] https://download.docker.com/linux/ubuntu zesty stable"
     state: present
 
-- name: Install Docker CE
+- name: Install docker-ce and docker-compose
   apt:
-    name: docker-ce
-    state: present
+    name: "{{ item }}"
     update_cache: yes
+    install_recommends: yes
+    state: present
+  with_items:
+  - docker-ce
+  - docker-compose
 
 - name: Enable Docker CE service on startup
   service:
