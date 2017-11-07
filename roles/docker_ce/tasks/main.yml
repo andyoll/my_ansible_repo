@@ -33,7 +33,6 @@
     state: present
   with_items:
   - docker-ce
-  - docker-compose
 
 - name: Enable Docker CE service on startup
   service:
