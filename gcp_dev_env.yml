@@ -11,6 +11,7 @@
     - chrome
     - chrome_remote_desktop
     - docker_ce
+    - docker_compose
     - openjdk8
     - intellij_idea
 
